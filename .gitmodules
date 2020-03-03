@@ -1,0 +1,3 @@
+[submodule "extern/tes3mp-rs"]
+	path = extern/tes3mp-rs
+	url = https://git.cijber.net/teamnwah/tes3mp-rs.git
