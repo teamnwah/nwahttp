@@ -1,0 +1,14 @@
+diff --git a/apps/openmw-mp/Script/ScriptFunction.cpp b/apps/openmw-mp/Script/ScriptFunction.cpp
+index 9a6d64206..d313a6be5 100644
+--- a/apps/openmw-mp/Script/ScriptFunction.cpp
++++ b/apps/openmw-mp/Script/ScriptFunction.cpp
+@@ -40,6 +40,8 @@ boost::any ScriptFunction::Call(const vector<boost::any> &args)
+
+     if (def.length() != args.size())
+         throw runtime_error("Script call: Number of arguments does not match definition");
++    if (script_type == SCRIPT_CPP)
++        fCpp();
+ #if defined (ENABLE_LUA)
+     else if (script_type == SCRIPT_LUA)
+     {
+
